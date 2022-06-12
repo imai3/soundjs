@@ -1,0 +1,29 @@
+<script src="./functions.js"></script>
+<script>
+
+window.addEventListener("touchstart",async (e)=>{
+    try {
+        //e.preventDefault()
+        X = e.changedTouches[0].pageX-1000
+        let t = 0
+        playsample(sound,0,0.4,0.2,0,false,0.9,0)
+        /*    playsample(sound,t+1.0,1,1,X,false,0,0)
+        playsample(sound,t+1.5,1,1,X,false,0,0)
+        playsample(sound,t+1.7,1,1,X,false,0,0)
+        playsample(sound,t+2.0,1,1,X,false,0,0)
+        */    console.log(1)
+    } catch (error) {
+        //e.preventDefault()
+        sound = await LoadSample("./samples/E808_CL-07.wav");
+        
+    }
+    
+})
+
+window.addEventListener("keydown",async function(e){
+    e.preventDefault()
+    sound = await LoadSample("./samples/E808_CL-07.wav");
+})
+//function playsample(sound,start,stop,playbackRate,detune,loop,loopStart,loopEnd){
+
+</script>
